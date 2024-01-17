@@ -7,3 +7,17 @@
 
 // 請在下方寫下你的程式碼
 
+type Todo = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean
+}
+
+export function fetchData(url: string): Promise<Todo>{
+    return new Promise(async (resolve) => {
+        const response = await fetch(url);
+        let jsonResponse: Todo = await response.json();
+        resolve(jsonResponse);
+    })
+}
