@@ -19,5 +19,5 @@ interface Vehicle{
 }
 
 export function vehicleInfo(vehicle: Vehicle): string {
-    return `${vehicle.brand} ${vehicle.model} (${vehicle.year})`
+    return `${vehicle.brand} ${vehicle.model} (${vehicle.year})`;
 }
